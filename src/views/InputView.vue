@@ -11,11 +11,11 @@
     </div>
     <hr class="my-2" />
     <div class="my-5 max-w-xl">
-      <InputComponent :gradientClass="false" :labelClass="'font-semibold mb-2 text-lg'" :labelText="'Input Text'" :inputName="'input text'" :placeholder="'Input Text'" type="text" v-model="data.form.text" :totalIcon="1" :firstIcon="''" :secondIcon="''" class="my-2"/>
-      <InputComponent :gradientClass="false" :labelClass="'font-semibold mb-2 text-lg'" :labelText="'Input Number'" :inputName="'input number'" :placeholder="'Input Number'" type="number" v-model="data.form.number" :totalIcon="1" :firstIcon="''" :secondIcon="''" class="my-2"/>
-      <InputComponent :gradientClass="false" :labelClass="'font-semibold mb-2 text-lg'" :labelText="'Input Password'" :inputName="'input password'" :placeholder="'Input Password'" type="password" v-model="data.form.password" :totalIcon="1" :firstIcon="''" :secondIcon="''" class="my-2"/>
-      <InputComponent :gradientClass="false" :labelClass="'font-semibold mb-2 text-lg'" :labelText="'Input Date'" :inputName="'input date'" :placeholder="'Input Date'" type="date" v-model="data.form.date" :totalIcon="1" :firstIcon="''" :secondIcon="''" class="my-2"/>
-      <InputComponent :gradientClass="false" :labelClass="'font-semibold mb-2 text-lg'" :labelText="'Input Email'" :inputName="'input email'" :placeholder="'Input Email'" type="email" v-model="data.form.email" :totalIcon="1" :firstIcon="''" :secondIcon="''" class="my-2"/>
+      <InputComponent  :labelClass="'font-semibold mb-2 text-lg'" :labelText="'Input Text'" :inputName="'input text'" :placeholder="'Input Text'" type="text" v-model="data.form.text"  class="my-2"/>
+      <InputComponent  :labelClass="'font-semibold mb-2 text-lg'" :labelText="'Input Number'" :inputName="'input number'" :placeholder="'Input Number'" type="number" v-model="data.form.number"  class="my-2"/>
+      <InputComponent  :labelClass="'font-semibold mb-2 text-lg'" :labelText="'Input Password'" :inputName="'input password'" :placeholder="'Input Password'" type="password" v-model="data.form.password"  class="my-2"/>
+      <InputComponent  :labelClass="'font-semibold mb-2 text-lg'" :labelText="'Input Date'" :inputName="'input date'" :placeholder="'Input Date'" type="date" v-model="data.form.date"  class="my-2"/>
+      <InputComponent  :labelClass="'font-semibold mb-2 text-lg'" :labelText="'Input Email'" :inputName="'input email'" :placeholder="'Input Email'" type="email" v-model="data.form.email"  class="my-2"/>
     </div>
   </div>
 </template>

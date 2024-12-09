@@ -1,21 +1,11 @@
 <template>
     <div>
-        <p :class="labelClass">{{ labelText }}{{ isRequired ? ' *' : '' }}</p>
+        <p :class="labelClass">{{ labelText }}</p>
         <label class="relative block">
-            <span :class="isIconFirst ? (editOrder ? 'absolute inset-y-0 left-0 flex items-center pl-[20px] py-[20px]' : 'absolute inset-y-0 left-0 flex items-center pl-[40px] py-[20px]') : classFirstIcon" v-if="totalIcon >= 1 && rtl == false">
-                <slot>
-                    <span v-html="firstIcon"></span>
-                </slot>
-            </span>
             <input :autocomplete="type == 'password' ? 'new-password' : 'nope'" :type="type" v-model="inputModel" :placeholder="placeholder" 
                 @keypress="callbackPress($event)" @keyup="callbackUp($event)" @paste="callbackPaste($event)"
                 :maxlength="maxlength" :readonly="readonly" :disabled="disabled"
                 class="placeholder:text-gray-300 block w-full rounded-2xl py-4 pr-3 focus:border-2 focus:border-black dark:focus:border-white focus:button-shadow-gki sm:text-sm text-base read-only:opacity-75 disabled:opacity-75" :class="inputClass" />
-            <span :class="(rtl == false ? 'absolute inset-y-0 right-0 flex items-center pr-[40px] py-[20px]' : 'absolute inset-y-0 right-0 flex items-center pr-[20px] py-[20px]')" v-if="totalIcon == 2"> 
-                <slot>
-                    <span v-html="secondIcon" @click="callback($event)" class="cursor-pointer"></span>
-                </slot>
-            </span>
         </label>
     </div>
 </template>
@@ -27,17 +17,9 @@ export default {
             type: String,
             default: ""
         },
-        rtl: {
-            type: Boolean,
-            default: false
-        },
         value: {
             type: String,
             default: ""
-        },
-        v: {
-            type: Object,
-            required: true
         },
         labelText: {
             type: String,
@@ -55,18 +37,6 @@ export default {
             type: String,
             default: ""
         },
-        firstIcon: {
-            type: String,
-            default: ""
-        },
-        secondIcon: {
-            type: String,
-            default: ""
-        },
-        totalIcon: {
-            type: Number,
-            default: 1
-        },
         inputClass:{
             type:String,
             default:""
@@ -82,26 +52,6 @@ export default {
         readonly : {
             type:Boolean,
             default:false
-        },
-        isIconFirst : {
-            type:Boolean,
-            default:true
-        },
-        classFirstIcon:{
-            type:String,
-            default:""
-        },
-        isRequired : {
-            type:Boolean,
-            default:false
-        },
-        gradientClass : {
-            type:Boolean,
-            default:false
-        },
-        editOrder : {
-            type: Boolean,
-            default : false
         }
     },
     computed: {
