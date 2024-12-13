@@ -1,14 +1,6 @@
 # vue-simple-starter-kit
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+This template should help get you started developing with Vue 3. with this template you can be easier change any component like (input field, button and select option) only with changing one file and the component will be changed on every file.
 
 ## Project Setup
 
